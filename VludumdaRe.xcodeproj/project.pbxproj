@@ -1,0 +1,325 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D5D2ADE81A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */; };
+		D5D2ADEB1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */; };
+		D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADEE1A3346A8006C5C96 /* main.cpp */; };
+		D5D2ADF21A3346A8006C5C96 /* VludumdaRe-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D5D2ADE31A3346A8006C5C96 /* VludumdaRe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VludumdaRe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "___VARIABLE_classPrefix:identifier___Application.cpp"; path = "Classes/___VARIABLE_classPrefix:identifier___Application.cpp"; sourceTree = "<group>"; };
+		D5D2ADE91A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "___VARIABLE_classPrefix:identifier___Application.h"; path = "Classes/___VARIABLE_classPrefix:identifier___Application.h"; sourceTree = "<group>"; };
+		D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "___VARIABLE_classPrefix:identifier___World.cpp"; path = "Classes/___VARIABLE_classPrefix:identifier___World.cpp"; sourceTree = "<group>"; };
+		D5D2ADEC1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "___VARIABLE_classPrefix:identifier___World.h"; path = "Classes/___VARIABLE_classPrefix:identifier___World.h"; sourceTree = "<group>"; };
+		D5D2ADEE1A3346A8006C5C96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "Supporting files/main.cpp"; sourceTree = "<group>"; };
+		D5D2ADF01A3346A8006C5C96 /* VludumdaRe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VludumdaRe-Info.plist"; path = "Supporting files/VludumdaRe-Info.plist"; sourceTree = "<group>"; };
+		D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VludumdaRe-Prefix.pch"; path = "Supporting files/VludumdaRe-Prefix.pch"; sourceTree = "<group>"; };
+		D5D2ADF41A3346A8006C5C96 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
+		D5D2ADF51A3346A8006C5C96 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings.json; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D5D2ADDF1A3346A8006C5C96 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D5D2ADD91A3346A8006C5C96 = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADE51A3346A8006C5C96 /* VludumdaRe */,
+				D5D2ADE41A3346A8006C5C96 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D5D2ADE41A3346A8006C5C96 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADE31A3346A8006C5C96 /* VludumdaRe.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D5D2ADE51A3346A8006C5C96 /* VludumdaRe */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADF31A3346A8006C5C96 /* Resources */,
+				D5D2ADE61A3346A8006C5C96 /* Classes */,
+				D5D2ADED1A3346A8006C5C96 /* Supporting files */,
+			);
+			path = VludumdaRe;
+			sourceTree = "<group>";
+		};
+		D5D2ADE61A3346A8006C5C96 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */,
+				D5D2ADE91A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.h */,
+				D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */,
+				D5D2ADEC1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.h */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		D5D2ADED1A3346A8006C5C96 /* Supporting files */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADEE1A3346A8006C5C96 /* main.cpp */,
+				D5D2ADF01A3346A8006C5C96 /* VludumdaRe-Info.plist */,
+				D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */,
+			);
+			name = "Supporting files";
+			sourceTree = "<group>";
+		};
+		D5D2ADF31A3346A8006C5C96 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D5D2ADF41A3346A8006C5C96 /* manifest.json */,
+				D5D2ADF51A3346A8006C5C96 /* settings.json */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		D5D2ADE01A3346A8006C5C96 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2ADF21A3346A8006C5C96 /* VludumdaRe-Prefix.pch in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		D5D2ADE21A3346A8006C5C96 /* VludumdaRe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D5D2ADF81A3346A8006C5C96 /* Build configuration list for PBXNativeTarget "VludumdaRe" */;
+			buildPhases = (
+				D5D2ADDE1A3346A8006C5C96 /* Sources */,
+				D5D2ADDF1A3346A8006C5C96 /* Frameworks */,
+				D5D2ADE01A3346A8006C5C96 /* Headers */,
+				D5D2ADE11A3346A8006C5C96 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VludumdaRe;
+			productName = VludumdaRe;
+			productReference = D5D2ADE31A3346A8006C5C96 /* VludumdaRe.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D5D2ADDA1A3346A8006C5C96 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0610;
+				ORGANIZATIONNAME = Uberpixel;
+				TargetAttributes = {
+					D5D2ADE21A3346A8006C5C96 = {
+						CreatedOnToolsVersion = 6.1.1;
+					};
+				};
+			};
+			buildConfigurationList = D5D2ADDD1A3346A8006C5C96 /* Build configuration list for PBXProject "VludumdaRe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = D5D2ADD91A3346A8006C5C96;
+			productRefGroup = D5D2ADE41A3346A8006C5C96 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D5D2ADE21A3346A8006C5C96 /* VludumdaRe */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		D5D2ADE11A3346A8006C5C96 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "OUTPUT_DIR=\"$BUILT_PRODUCTS_DIR/$CONTENTS_FOLDER_PATH/Resources/\"\nRESOURCES_DIR=\"$PROJECT_DIR/$TARGET_NAME/Resources/\"\n\nrsync -avz \"$RESOURCES_DIR\" \"$OUTPUT_DIR\"\n\t\t\t\t\t";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D5D2ADDE1A3346A8006C5C96 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D5D2ADE81A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp in Sources */,
+				D5D2ADEB1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp in Sources */,
+				D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		D5D2ADF61A3346A8006C5C96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+			};
+			name = Debug;
+		};
+		D5D2ADF71A3346A8006C5C96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+			};
+			name = Release;
+		};
+		D5D2ADF91A3346A8006C5C96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VludumdaRe/Supporting files/VludumdaRe-Prefix.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include/rayne/,
+				);
+				INFOPLIST_FILE = "VludumdaRe/Supporting files/VludumdaRe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib/,
+				);
+				OTHER_LDFLAGS = "-lRayne";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		D5D2ADFA1A3346A8006C5C96 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "VludumdaRe/Supporting files/VludumdaRe-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"NDEBUG=1",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/include/rayne/,
+				);
+				INFOPLIST_FILE = "VludumdaRe/Supporting files/VludumdaRe-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					/usr/local/lib/,
+				);
+				OTHER_LDFLAGS = "-lRayne";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D5D2ADDD1A3346A8006C5C96 /* Build configuration list for PBXProject "VludumdaRe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2ADF61A3346A8006C5C96 /* Debug */,
+				D5D2ADF71A3346A8006C5C96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D5D2ADF81A3346A8006C5C96 /* Build configuration list for PBXNativeTarget "VludumdaRe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5D2ADF91A3346A8006C5C96 /* Debug */,
+				D5D2ADFA1A3346A8006C5C96 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D5D2ADDA1A3346A8006C5C96 /* Project object */;
+}
