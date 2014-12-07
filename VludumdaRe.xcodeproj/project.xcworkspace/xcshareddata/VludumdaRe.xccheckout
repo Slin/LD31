@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>93778C0C-7339-407A-8CBD-955AAA815253</string>
+	<key>IDESourceControlProjectName</key>
+	<string>VludumdaRe</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>497C419B691609C53657C1270E63B643FDE41C0A</key>
+		<string>github.com:Slin/LD31.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>VludumdaRe.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>497C419B691609C53657C1270E63B643FDE41C0A</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>github.com:Slin/LD31.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>497C419B691609C53657C1270E63B643FDE41C0A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>497C419B691609C53657C1270E63B643FDE41C0A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>VludumdaRe</string>
+		</dict>
+	</array>
+</dict>
+</plist>

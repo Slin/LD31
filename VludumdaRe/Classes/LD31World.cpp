@@ -15,7 +15,7 @@
 namespace LD31
 {
 	World::World() :
-		RN::World("GenericSceneManager"), _hmd(nullptr), _ball(nullptr), _triggerCount(0), _activeBall(nullptr)
+		RN::World("GenericSceneManager"), _hmd(nullptr), _ball(nullptr), _triggerCount(0)
 	{
 		RN::bullet::PhysicsWorld *attachment = new RN::bullet::PhysicsWorld();
 		attachment->SetStepSize(1.0/240.0, 200);
@@ -37,27 +37,49 @@ namespace LD31
 	
 	void World::LoadOnThread(RN::Thread *thread, RN::Deserializer *deserializer)
 	{
+		RN::Model *sky = RN::Model::WithSkyCube("textures/sky_up.png", "textures/sky_down.png", "textures/sky_left.png", "textures/sky_right.png", "textures/sky_front.png", "textures/sky_back.png");
+		for(int i = 0; i < sky->GetMeshCount(0); i++)
+		{
+			sky->GetMaterialAtIndex(0, i)->SetAmbientColor(RN::Color(3.0f, 3.0f, 3.0f, 1.0f));
+		}
+		
+		RN::ShadowParameter shadowParam;
 		if(_hmd)
 		{
 			_camera = new RO::Camera(RN::Texture::Format::RGB16F);
 			RO::Camera *tempCamera = static_cast<RO::Camera *>(_camera);
 			tempCamera->SetHMD(_hmd);
+			tempCamera->GetLeftCamera()->SetSky(sky);
+			tempCamera->GetRightCamera()->SetSky(sky);
+			tempCamera->GetLeftCamera()->SetClipFar(300.0f);
+			tempCamera->GetRightCamera()->SetClipFar(300.0f);
 			
 			FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetRightCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
+			
+			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera());
 		}
 		else
 		{
 			_camera = new RN::Camera(RN::Vector2(), RN::Texture::Format::RGB16F);
 			RN::Camera *tempCamera = static_cast<RN::Camera *>(_camera);
 			tempCamera->SetBlitShader(RN::Shader::WithFile("shader/rn_DrawFramebufferTonemap"));
+			tempCamera->SetSky(sky);
 			
 			FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera);
+			shadowParam = RN::ShadowParameter(tempCamera);
 		}
 		_camera->SetFlags(_camera->GetFlags()|RN::SceneNode::Flags::NoSave);
 		_camera->SetPosition(RN::Vector3(0.0f, 1.0f, 0.0f));
+		
+		RN::Light *sun = new RN::Light(RN::Light::Type::DirectionalLight);
+		sun->SetRotation(RN::Vector3(-45.0, -60.0, 0.0));
+		sun->SetIntensity(1.5f);
+		
+		shadowParam.distanceBlendFactor = 0.01f;
+		sun->ActivateShadows(shadowParam);
 		
 		RN::Renderer::GetSharedInstance()->SetHDRExposure(1.0f);
 		RN::Renderer::GetSharedInstance()->SetHDRWhitePoint(2.5f);
@@ -67,23 +89,7 @@ namespace LD31
 		RN::bullet::RigidBody *body = new RN::bullet::RigidBody(shape, 0.0f);
 		levelEnt->AddAttachment(body);
 		
-		_hand = new RN::Entity(RN::Model::WithFile("assets/racket/racket-texturedrayne.sgm"));
-		_hand->GetModel()->GetMaterialAtIndex(0, 0)->SetDiscard(true);
-		RN::bullet::CompoundShape *racketshape = new RN::bullet::CompoundShape();
-		racketshape->Autorelease();
-		racketshape->AddChild(RN::bullet::CylinderShape::WithHalfExtents(RN::Vector3(0.3, 0.02, 0.3)), RN::Vector3(0.0f, 0.0f, -0.6f), RN::Vector3(0.0f, 0.0f, 0.0f));
-		
-		RN::bullet::RigidBody *racketBodyTemp = RN::bullet::RigidBody::WithShape(racketshape, 0.1f);
-		_hand->AddAttachment(racketBodyTemp);
-		racketBodyTemp->GetBulletRigidBody()->forceActivationState(DISABLE_DEACTIVATION);
-		
-		_handGhost = new RN::SceneNode();
-		_racketBody = RN::bullet::RigidBody::WithShape(RN::bullet::SphereShape::WithRadius(0.001f), 0.0f);
-		_handGhost->AddAttachment(_racketBody);
-		btTransform noOffset;
-		noOffset.setIdentity();
-		btFixedConstraint *constraint = new btFixedConstraint(*racketBodyTemp->GetBulletRigidBody(), *_racketBody->GetBulletRigidBody(), noOffset, noOffset);
-		RN::bullet::PhysicsWorld::GetSharedInstance()->GetBulletDynamicsWorld()->addConstraint(constraint);
+		_racket = new Racket();
 	}
 
 	void World::Update(float delta)
@@ -96,8 +102,8 @@ namespace LD31
 		position.y += 1.0f;
 		position += _positionOffset;
 		
-		_handGhost->SetPosition(position);
-		_handGhost->SetRotation(rotation);
+		_racket->SetPosition(position);
+		_racket->SetRotation(rotation);
 		
 		if(_hmd && controller->GetButtonJustPressed(SIXENSE_BUTTON_START))
 		{
@@ -113,54 +119,36 @@ namespace LD31
 		{
 			_triggerCount = 0;
 			
-			if(!_ball)
+			if(!_ball || !_ball->IsGrabbed())
 			{
-				while(!_ballSpeeds.empty())
+				if(_ball)
 				{
-					_ballSpeeds.pop_front();
+					_ball->RemoveFromWorld();
+					_ball->Release();
+					_ball = nullptr;
 				}
+				_ball = new Ball();
 				
-				if(_activeBall)
-				{
-					_activeBall->RemoveFromWorld();
-					_activeBall->Release();
-					_activeBall = nullptr;
-				}
-				_ball = new RN::Entity(RN::Model::WithFile("assets/ball/ball.sgm"));
+				position = ballcontroller->GetPosition();
+				rotation = ballcontroller->GetRotation();
+				position.y += 1.0f;
+				position += _positionOffset;
+				_ball->RN::SceneNode::SetPosition(position);
 			}
 		}
-		else if(_ball && _triggerCount > 2)
+		else if(_ball && _ball->IsGrabbed() && _triggerCount > 2)
 		{
-			RN::bullet::Shape *ballshape = RN::bullet::SphereShape::WithRadius(0.05f);
-			RN::bullet::RigidBody *body = RN::bullet::RigidBody::WithShape(ballshape, 0.1f);
-			_ball->AddAttachment(body);
-			body->SetCCDSweptSphereRadius(0.1f);
-			body->SetCCDMotionThreshold(0.00001f);
-			
-			RN::Vector3 velocity;
-			for(RN::Vector3 speed : _ballSpeeds)
-			{
-				velocity += speed;
-			}
-			velocity /= _ballSpeeds.size();
-			body->SetLinearVelocity(velocity/0.7f);
-			
-			_activeBall = _ball;
-			_ball = nullptr;
+			_ball->Throw();
 		}
 		
-		if(_ball)
+		if(_ball && _ball->IsGrabbed())
 		{
 			position = ballcontroller->GetPosition();
 			rotation = ballcontroller->GetRotation();
 			position.y += 1.0f;
 			position += _positionOffset;
-			
-			if(_ballSpeeds.size() > 10.0f)
-				_ballSpeeds.pop_front();
-			_ballSpeeds.push_back((position - _ball->GetPosition())/delta);
 		
-			_ball->SetPosition(position);
+			_ball->SetPosition(position, delta);
 			_ball->SetRotation(rotation);
 		}
 	}

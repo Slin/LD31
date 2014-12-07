@@ -15,6 +15,8 @@
 #include <deque>
 #include <RBPhysicsWorld.h>
 #include <RBRigidBody.h>
+#include "LD31Racket.h"
+#include "LD31Ball.h"
 
 namespace LD31
 {
@@ -31,12 +33,10 @@ namespace LD31
 		
 	private:
 		RN::SceneNode *_camera;
-		RN::Entity *_hand;
-		RN::SceneNode *_handGhost;
-		RN::Entity *_ball;
-		RN::Entity *_activeBall;
-		RN::bullet::RigidBody *_racketBody;
-		std::deque<RN::Vector3> _ballSpeeds;
+		Racket *_racket;
+		
+		Ball *_ball;
+		
 		int _triggerCount;
 		RO::HMD *_hmd;
 		RN::Vector3 _positionOffset;

@@ -21,6 +21,10 @@
 		D5D2AE181A338DEC006C5C96 /* LD31FullscreenEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */; };
 		D5D2AE191A338DEC006C5C96 /* LD31World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2AE131A338DEC006C5C96 /* LD31World.cpp */; };
 		D5D2AE1A1A338DEC006C5C96 /* LD31World.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2AE141A338DEC006C5C96 /* LD31World.h */; };
+		D5E00DD21A348E2200A1DEE2 /* LD31Racket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5E00DD01A348E2200A1DEE2 /* LD31Racket.cpp */; };
+		D5E00DD31A348E2200A1DEE2 /* LD31Racket.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */; };
+		D5E00DD61A34910600A1DEE2 /* LD31Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */; };
+		D5E00DD71A34910600A1DEE2 /* LD31Ball.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E00DD51A34910600A1DEE2 /* LD31Ball.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,7 +33,7 @@
 		D5D2ADF01A3346A8006C5C96 /* VludumdaRe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VludumdaRe-Info.plist"; path = "Supporting files/VludumdaRe-Info.plist"; sourceTree = "<group>"; };
 		D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VludumdaRe-Prefix.pch"; path = "Supporting files/VludumdaRe-Prefix.pch"; sourceTree = "<group>"; };
 		D5D2ADF41A3346A8006C5C96 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
-		D5D2ADF51A3346A8006C5C96 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings.json; sourceTree = "<group>"; };
+		D5D2ADF51A3346A8006C5C96 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = folder; path = settings.json; sourceTree = "<group>"; };
 		D5D2AE031A337B5B006C5C96 /* libsixense_utils_x64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsixense_utils_x64.dylib; path = "VludumdaRe/Resources/modules/rayne-sixense/libsixense_utils_x64.dylib"; sourceTree = "<group>"; };
 		D5D2AE041A337B5B006C5C96 /* libsixense_x64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsixense_x64.dylib; path = "VludumdaRe/Resources/modules/rayne-sixense/libsixense_x64.dylib"; sourceTree = "<group>"; };
 		D5D2AE071A338C3B006C5C96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
@@ -42,6 +46,10 @@
 		D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31FullscreenEffects.h; path = Classes/LD31FullscreenEffects.h; sourceTree = "<group>"; };
 		D5D2AE131A338DEC006C5C96 /* LD31World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31World.cpp; path = Classes/LD31World.cpp; sourceTree = "<group>"; };
 		D5D2AE141A338DEC006C5C96 /* LD31World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31World.h; path = Classes/LD31World.h; sourceTree = "<group>"; };
+		D5E00DD01A348E2200A1DEE2 /* LD31Racket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31Racket.cpp; path = Classes/LD31Racket.cpp; sourceTree = "<group>"; };
+		D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Racket.h; path = Classes/LD31Racket.h; sourceTree = "<group>"; };
+		D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31Ball.cpp; path = Classes/LD31Ball.cpp; sourceTree = "<group>"; };
+		D5E00DD51A34910600A1DEE2 /* LD31Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Ball.h; path = Classes/LD31Ball.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +110,10 @@
 				D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */,
 				D5D2AE131A338DEC006C5C96 /* LD31World.cpp */,
 				D5D2AE141A338DEC006C5C96 /* LD31World.h */,
+				D5E00DD01A348E2200A1DEE2 /* LD31Racket.cpp */,
+				D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */,
+				D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */,
+				D5E00DD51A34910600A1DEE2 /* LD31Ball.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -133,7 +145,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D2ADF21A3346A8006C5C96 /* VludumdaRe-Prefix.pch in Headers */,
+				D5E00DD71A34910600A1DEE2 /* LD31Ball.h in Headers */,
 				D5D2AE1A1A338DEC006C5C96 /* LD31World.h in Headers */,
+				D5E00DD31A348E2200A1DEE2 /* LD31Racket.h in Headers */,
 				D5D2AE161A338DEC006C5C96 /* LD31Application.h in Headers */,
 				D5D2AE181A338DEC006C5C96 /* LD31FullscreenEffects.h in Headers */,
 			);
@@ -212,10 +226,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E00DD61A34910600A1DEE2 /* LD31Ball.cpp in Sources */,
 				D5D2AE151A338DEC006C5C96 /* LD31Application.cpp in Sources */,
 				D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */,
 				D5D2AE191A338DEC006C5C96 /* LD31World.cpp in Sources */,
 				D5D2AE171A338DEC006C5C96 /* LD31FullscreenEffects.cpp in Sources */,
+				D5E00DD21A348E2200A1DEE2 /* LD31Racket.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +398,7 @@
 				D5D2ADFA1A3346A8006C5C96 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
