@@ -93,6 +93,14 @@ namespace LD31
 		RN::bullet::TriangleMeshShape *shape = new RN::bullet::TriangleMeshShape(levelEnt->GetModel());
 		RN::bullet::RigidBody *body = new RN::bullet::RigidBody(shape, 0.0f);
 		levelEnt->AddAttachment(body);
+		levelEnt->SetPosition(RN::Vector3(3.0f, 0.0f, 0.0f));
+		levelEnt->GetModel()->GetMaterialAtIndex(0, 0)->SetBlending(true);
+		levelEnt->GetModel()->GetMaterialAtIndex(0, 13)->AddTexture(RN::Texture::WithFile("textures/noise.png"));
+		levelEnt->GetModel()->GetMaterialAtIndex(0, 13)->SetShader(RN::Shader::WithFile("shaders/rn_Ground"));
+		
+		RN::Entity *waterent = new RN::Entity(RN::Model::WithFile("assets/water/water.sgm"));
+		waterent->GetModel()->GetMaterialAtIndex(0, 0)->SetDiscard(false);
+		waterent->GetModel()->GetMaterialAtIndex(0, 0)->SetBlending(false);
 		
 		_racket = new Racket();
 		_opponent = new Opponent();

@@ -34,21 +34,21 @@ namespace LD31
 		
 		if(ball && !ball->IsGrabbed() && ball->GetPosition().GetLength() > 4.0f)
 		{
-			if(_active)
+			if(_active && ball->GetPosition().z < -11.0f)
 			{
 				RN::Vector3 targetPosition = ball->GetPosition();
 				RN::bullet::RigidBody *ballBody = ball->GetAttachment<RN::bullet::RigidBody>();
 			
 				float timeToGround = -ballBody->GetLinearVelocity().y/9.81+sqrt((ballBody->GetLinearVelocity().y/9.81)*(ballBody->GetLinearVelocity().y/9.81) + targetPosition.y/(0.5*9.81));
 				targetPosition += ballBody->GetLinearVelocity()*timeToGround*0.1f;
-				targetPosition.y = 0.0f;
+				targetPosition.y = 1.0f;
 				SetPosition(targetPosition);
 				
 				if((ball->GetPosition()-GetPosition()).GetLength() < 2.0f)
 				{
 					_active = false;
 					RN::Vector3 diffToPlayer = -GetPosition();
-					ballBody->SetLinearVelocity(diffToPlayer.GetNormalized()*diffToPlayer.GetLength()*0.7f+RN::Vector3(0.0f, 9.81f*0.8f, 0.0f));
+					ballBody->SetLinearVelocity(diffToPlayer.GetNormalized()*diffToPlayer.GetLength()*0.6f+RN::Vector3(0.0f, 9.81f*0.9f, 0.0f));
 				}
 			}
 		}
