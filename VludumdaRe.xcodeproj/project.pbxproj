@@ -7,23 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D5D2ADE81A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */; };
-		D5D2ADEB1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */; };
 		D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2ADEE1A3346A8006C5C96 /* main.cpp */; };
 		D5D2ADF21A3346A8006C5C96 /* VludumdaRe-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */; };
+		D5D2AE051A337B5B006C5C96 /* libsixense_utils_x64.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE031A337B5B006C5C96 /* libsixense_utils_x64.dylib */; };
+		D5D2AE061A337B5B006C5C96 /* libsixense_x64.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE041A337B5B006C5C96 /* libsixense_x64.dylib */; };
+		D5D2AE081A338C3B006C5C96 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE071A338C3B006C5C96 /* Foundation.framework */; };
+		D5D2AE0A1A338C41006C5C96 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE091A338C41006C5C96 /* CoreGraphics.framework */; };
+		D5D2AE0C1A338C55006C5C96 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE0B1A338C55006C5C96 /* OpenGL.framework */; };
+		D5D2AE0E1A338C5F006C5C96 /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5D2AE0D1A338C5F006C5C96 /* IOKit.framework */; };
+		D5D2AE151A338DEC006C5C96 /* LD31Application.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2AE0F1A338DEC006C5C96 /* LD31Application.cpp */; };
+		D5D2AE161A338DEC006C5C96 /* LD31Application.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2AE101A338DEC006C5C96 /* LD31Application.h */; };
+		D5D2AE171A338DEC006C5C96 /* LD31FullscreenEffects.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2AE111A338DEC006C5C96 /* LD31FullscreenEffects.cpp */; };
+		D5D2AE181A338DEC006C5C96 /* LD31FullscreenEffects.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */; };
+		D5D2AE191A338DEC006C5C96 /* LD31World.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5D2AE131A338DEC006C5C96 /* LD31World.cpp */; };
+		D5D2AE1A1A338DEC006C5C96 /* LD31World.h in Headers */ = {isa = PBXBuildFile; fileRef = D5D2AE141A338DEC006C5C96 /* LD31World.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D5D2ADE31A3346A8006C5C96 /* VludumdaRe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VludumdaRe.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "___VARIABLE_classPrefix:identifier___Application.cpp"; path = "Classes/___VARIABLE_classPrefix:identifier___Application.cpp"; sourceTree = "<group>"; };
-		D5D2ADE91A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "___VARIABLE_classPrefix:identifier___Application.h"; path = "Classes/___VARIABLE_classPrefix:identifier___Application.h"; sourceTree = "<group>"; };
-		D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "___VARIABLE_classPrefix:identifier___World.cpp"; path = "Classes/___VARIABLE_classPrefix:identifier___World.cpp"; sourceTree = "<group>"; };
-		D5D2ADEC1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "___VARIABLE_classPrefix:identifier___World.h"; path = "Classes/___VARIABLE_classPrefix:identifier___World.h"; sourceTree = "<group>"; };
 		D5D2ADEE1A3346A8006C5C96 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = "Supporting files/main.cpp"; sourceTree = "<group>"; };
 		D5D2ADF01A3346A8006C5C96 /* VludumdaRe-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "VludumdaRe-Info.plist"; path = "Supporting files/VludumdaRe-Info.plist"; sourceTree = "<group>"; };
 		D5D2ADF11A3346A8006C5C96 /* VludumdaRe-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "VludumdaRe-Prefix.pch"; path = "Supporting files/VludumdaRe-Prefix.pch"; sourceTree = "<group>"; };
 		D5D2ADF41A3346A8006C5C96 /* manifest.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = manifest.json; sourceTree = "<group>"; };
 		D5D2ADF51A3346A8006C5C96 /* settings.json */ = {isa = PBXFileReference; lastKnownFileType = folder; name = settings.json; sourceTree = "<group>"; };
+		D5D2AE031A337B5B006C5C96 /* libsixense_utils_x64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsixense_utils_x64.dylib; path = "VludumdaRe/Resources/modules/rayne-sixense/libsixense_utils_x64.dylib"; sourceTree = "<group>"; };
+		D5D2AE041A337B5B006C5C96 /* libsixense_x64.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsixense_x64.dylib; path = "VludumdaRe/Resources/modules/rayne-sixense/libsixense_x64.dylib"; sourceTree = "<group>"; };
+		D5D2AE071A338C3B006C5C96 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D5D2AE091A338C41006C5C96 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		D5D2AE0B1A338C55006C5C96 /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/OpenGL.framework; sourceTree = DEVELOPER_DIR; };
+		D5D2AE0D1A338C5F006C5C96 /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.9.sdk/System/Library/Frameworks/IOKit.framework; sourceTree = DEVELOPER_DIR; };
+		D5D2AE0F1A338DEC006C5C96 /* LD31Application.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31Application.cpp; path = Classes/LD31Application.cpp; sourceTree = "<group>"; };
+		D5D2AE101A338DEC006C5C96 /* LD31Application.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Application.h; path = Classes/LD31Application.h; sourceTree = "<group>"; };
+		D5D2AE111A338DEC006C5C96 /* LD31FullscreenEffects.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31FullscreenEffects.cpp; path = Classes/LD31FullscreenEffects.cpp; sourceTree = "<group>"; };
+		D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31FullscreenEffects.h; path = Classes/LD31FullscreenEffects.h; sourceTree = "<group>"; };
+		D5D2AE131A338DEC006C5C96 /* LD31World.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31World.cpp; path = Classes/LD31World.cpp; sourceTree = "<group>"; };
+		D5D2AE141A338DEC006C5C96 /* LD31World.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31World.h; path = Classes/LD31World.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +49,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5D2AE0E1A338C5F006C5C96 /* IOKit.framework in Frameworks */,
+				D5D2AE0C1A338C55006C5C96 /* OpenGL.framework in Frameworks */,
+				D5D2AE0A1A338C41006C5C96 /* CoreGraphics.framework in Frameworks */,
+				D5D2AE081A338C3B006C5C96 /* Foundation.framework in Frameworks */,
+				D5D2AE051A337B5B006C5C96 /* libsixense_utils_x64.dylib in Frameworks */,
+				D5D2AE061A337B5B006C5C96 /* libsixense_x64.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +64,12 @@
 		D5D2ADD91A3346A8006C5C96 = {
 			isa = PBXGroup;
 			children = (
+				D5D2AE0D1A338C5F006C5C96 /* IOKit.framework */,
+				D5D2AE0B1A338C55006C5C96 /* OpenGL.framework */,
+				D5D2AE091A338C41006C5C96 /* CoreGraphics.framework */,
+				D5D2AE071A338C3B006C5C96 /* Foundation.framework */,
+				D5D2AE031A337B5B006C5C96 /* libsixense_utils_x64.dylib */,
+				D5D2AE041A337B5B006C5C96 /* libsixense_x64.dylib */,
 				D5D2ADE51A3346A8006C5C96 /* VludumdaRe */,
 				D5D2ADE41A3346A8006C5C96 /* Products */,
 			);
@@ -66,10 +96,12 @@
 		D5D2ADE61A3346A8006C5C96 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				D5D2ADE71A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp */,
-				D5D2ADE91A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.h */,
-				D5D2ADEA1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp */,
-				D5D2ADEC1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.h */,
+				D5D2AE0F1A338DEC006C5C96 /* LD31Application.cpp */,
+				D5D2AE101A338DEC006C5C96 /* LD31Application.h */,
+				D5D2AE111A338DEC006C5C96 /* LD31FullscreenEffects.cpp */,
+				D5D2AE121A338DEC006C5C96 /* LD31FullscreenEffects.h */,
+				D5D2AE131A338DEC006C5C96 /* LD31World.cpp */,
+				D5D2AE141A338DEC006C5C96 /* LD31World.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -101,6 +133,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				D5D2ADF21A3346A8006C5C96 /* VludumdaRe-Prefix.pch in Headers */,
+				D5D2AE1A1A338DEC006C5C96 /* LD31World.h in Headers */,
+				D5D2AE161A338DEC006C5C96 /* LD31Application.h in Headers */,
+				D5D2AE181A338DEC006C5C96 /* LD31FullscreenEffects.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,9 +212,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D5D2ADE81A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___Application.cpp in Sources */,
-				D5D2ADEB1A3346A8006C5C96 /* ___VARIABLE_classPrefix:identifier___World.cpp in Sources */,
+				D5D2AE151A338DEC006C5C96 /* LD31Application.cpp in Sources */,
 				D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */,
+				D5D2AE191A338DEC006C5C96 /* LD31World.cpp in Sources */,
+				D5D2AE171A338DEC006C5C96 /* LD31FullscreenEffects.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,14 +299,28 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/include/rayne/,
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-sixense/include\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus/include\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus/Src\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-bullet/include\"",
 				);
 				INFOPLIST_FILE = "VludumdaRe/Supporting files/VludumdaRe-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib/,
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules\"",
+					"$(PROJECT_DIR)/VludumdaRe/Resources/modules/rayne-sixense",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-bullet\"",
 				);
-				OTHER_LDFLAGS = "-lRayne";
+				OTHER_LDFLAGS = (
+					"-lRayne",
+					"-lrayne-sixense",
+					"-lrayne-oculus",
+					"-lrayne-bullet",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -287,14 +337,28 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/include/rayne/,
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-sixense/include\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus/include\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus/Src\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-bullet/include\"",
 				);
 				INFOPLIST_FILE = "VludumdaRe/Supporting files/VludumdaRe-Info.plist";
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					/usr/local/lib/,
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules\"",
+					"$(PROJECT_DIR)/VludumdaRe/Resources/modules/rayne-sixense",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-oculus\"",
+					"\"$(SRCROOT)/VludumdaRe/Resources/modules/rayne-bullet\"",
 				);
-				OTHER_LDFLAGS = "-lRayne";
+				OTHER_LDFLAGS = (
+					"-lRayne",
+					"-lrayne-sixense",
+					"-lrayne-oculus",
+					"-lrayne-bullet",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx10.9;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

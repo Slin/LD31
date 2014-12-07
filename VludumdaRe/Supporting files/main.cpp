@@ -7,7 +7,7 @@
 //
 
 #include <Rayne/Rayne.h>
-#include "___VARIABLE_classPrefix:identifier___Application.h"
+#include "LD31Application.h"
 
 int main(int argc, char *argv[])
 {
@@ -28,7 +28,7 @@ int main(int argc, char *argv[])
 	
 	try
 	{
-		auto application = new ___VARIABLE_classPrefix:identifier___::Application();
+		auto application = new LD31::Application();
 		auto kernel = new RN::Kernel(application);
 		
 		while(kernel->Tick())
