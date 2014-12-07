@@ -32,7 +32,7 @@ void main()
 	vec4 color1 = texture(mTexture1, vertPosition.xz);
 	
 	vec3 normal = normalize(vertNormal);
-	vec4 color = color0*color1*color1*color1*color1;
+	vec4 color = color0*color1*color1;
 	
 	rn_Lighting(color, vec4(0.0), normal, vertPosition);
 	
