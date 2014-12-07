@@ -45,7 +45,7 @@ namespace LD31
 			}
 			velocity /= _speeds.size();
 		}
-		body->SetLinearVelocity(velocity/0.7f);
+		body->SetLinearVelocity(velocity/0.6f);
 	}
 	
 	void Ball::SetPosition(const RN::Vector3 &pos, float delta)

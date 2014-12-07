@@ -17,6 +17,7 @@
 #include <RBRigidBody.h>
 #include "LD31Racket.h"
 #include "LD31Ball.h"
+#include "LD31Opponent.h"
 
 namespace LD31
 {
@@ -30,12 +31,13 @@ namespace LD31
 		
 		void LoadOnThread(RN::Thread *thread, RN::Deserializer *deserializer) override;
 		void Update(float delta) override;
+		Ball *GetBall() const;
 		
 	private:
 		RN::SceneNode *_camera;
 		Racket *_racket;
-		
 		Ball *_ball;
+		Opponent *_opponent;
 		
 		int _triggerCount;
 		RO::HMD *_hmd;
