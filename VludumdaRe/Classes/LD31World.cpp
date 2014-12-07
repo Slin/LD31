@@ -51,15 +51,15 @@ namespace LD31
 			tempCamera->SetHMD(_hmd);
 			tempCamera->GetLeftCamera()->SetSky(sky);
 			tempCamera->GetRightCamera()->SetSky(sky);
-			tempCamera->GetLeftCamera()->SetClipFar(300.0f);
-			tempCamera->GetRightCamera()->SetClipFar(300.0f);
+			tempCamera->GetLeftCamera()->SetClipFar(200.0f);
+			tempCamera->GetRightCamera()->SetClipFar(200.0f);
 			
 			//FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
 			//FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetRightCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
 			
-			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera());
+			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera(), 512);
 		}
 		else
 		{
@@ -79,7 +79,7 @@ namespace LD31
 		sun->SetIntensity(1.5f);
 		
 		shadowParam.distanceBlendFactor = 0.01f;
-		//sun->ActivateShadows(shadowParam);
+		sun->ActivateShadows(shadowParam);
 		
 		RN::Renderer::GetSharedInstance()->SetHDRExposure(1.0f);
 		RN::Renderer::GetSharedInstance()->SetHDRWhitePoint(2.5f);
