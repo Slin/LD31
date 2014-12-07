@@ -13,7 +13,15 @@ namespace LD31
 {
 	Ball::Ball() : _isGrabbed(true)
 	{
-		SetModel(RN::Model::WithFile("assets/ball/ball.sgm"));
+		static std::once_flag onceFlagModel;
+		static RN::Model *ballModel;
+		
+		std::call_once(onceFlagModel, []() {
+			ballModel = RN::Model::WithFile("assets/ball/ball.sgm");
+			ballModel->Retain();
+		});
+		
+		SetModel(ballModel);
 	}
 	
 	Ball::~Ball()

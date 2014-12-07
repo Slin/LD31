@@ -14,7 +14,7 @@ namespace LD31
 	Opponent::Opponent() : _active(true)
 	{
 		SetModel(RN::Model::WithFile("assets/blob/blob.sgm"));
-		SetScale(RN::Vector3(0.8f));
+		SetScale(RN::Vector3(0.5f));
 	}
 	
 	Opponent::~Opponent()
@@ -44,7 +44,7 @@ namespace LD31
 				targetPosition.y = 1.0f;
 				SetPosition(targetPosition);
 				
-				if((ball->GetPosition()-GetPosition()).GetLength() < 2.0f)
+				if((ball->GetPosition()-GetPosition()).GetLength() < 1.5f)
 				{
 					_active = false;
 					RN::Vector3 diffToPlayer = -GetPosition();
