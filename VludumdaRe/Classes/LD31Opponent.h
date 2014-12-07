@@ -11,14 +11,18 @@
 
 namespace LD31
 {
-	class Opponent
+	class Opponent : public RN::Entity
 	{
 	public:
 		Opponent();
 		~Opponent();
 		
-	private:
+		void SetStartPosition(const RN::Vector3 &pos);
+		void Update(float delta) override;
 		
+	private:
+		RN::Vector3 _startPosition;
+		bool _active;
 	};
 }
 

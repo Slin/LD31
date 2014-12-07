@@ -35,6 +35,11 @@ namespace LD31
 		_hmd = hmd;
 	}
 	
+	Ball *World::GetBall() const
+	{
+		return _ball;
+	}
+	
 	void World::LoadOnThread(RN::Thread *thread, RN::Deserializer *deserializer)
 	{
 		RN::Model *sky = RN::Model::WithSkyCube("textures/sky_up.png", "textures/sky_down.png", "textures/sky_left.png", "textures/sky_right.png", "textures/sky_front.png", "textures/sky_back.png");
@@ -51,8 +56,8 @@ namespace LD31
 			tempCamera->SetHMD(_hmd);
 			tempCamera->GetLeftCamera()->SetSky(sky);
 			tempCamera->GetRightCamera()->SetSky(sky);
-			tempCamera->GetLeftCamera()->SetClipFar(200.0f);
-			tempCamera->GetRightCamera()->SetClipFar(200.0f);
+			tempCamera->GetLeftCamera()->SetClipFar(150.0f);
+			tempCamera->GetRightCamera()->SetClipFar(150.0f);
 			
 			//FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
@@ -78,7 +83,7 @@ namespace LD31
 		sun->SetRotation(RN::Vector3(-45.0, -60.0, 0.0));
 		sun->SetIntensity(1.5f);
 		
-		shadowParam.distanceBlendFactor = 0.01f;
+		shadowParam.distanceBlendFactor = 0.02f;
 		sun->ActivateShadows(shadowParam);
 		
 		RN::Renderer::GetSharedInstance()->SetHDRExposure(1.0f);
@@ -90,6 +95,8 @@ namespace LD31
 		levelEnt->AddAttachment(body);
 		
 		_racket = new Racket();
+		_opponent = new Opponent();
+		_opponent->SetStartPosition(RN::Vector3(0.0f, 1.0, -5.0f));
 	}
 
 	void World::Update(float delta)
