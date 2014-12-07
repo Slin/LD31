@@ -25,6 +25,8 @@
 		D5E00DD31A348E2200A1DEE2 /* LD31Racket.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */; };
 		D5E00DD61A34910600A1DEE2 /* LD31Ball.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */; };
 		D5E00DD71A34910600A1DEE2 /* LD31Ball.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E00DD51A34910600A1DEE2 /* LD31Ball.h */; };
+		D5E00DDE1A34971700A1DEE2 /* LD31Opponent.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D5E00DDC1A34971700A1DEE2 /* LD31Opponent.cpp */; };
+		D5E00DDF1A34971700A1DEE2 /* LD31Opponent.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E00DDD1A34971700A1DEE2 /* LD31Opponent.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Racket.h; path = Classes/LD31Racket.h; sourceTree = "<group>"; };
 		D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31Ball.cpp; path = Classes/LD31Ball.cpp; sourceTree = "<group>"; };
 		D5E00DD51A34910600A1DEE2 /* LD31Ball.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Ball.h; path = Classes/LD31Ball.h; sourceTree = "<group>"; };
+		D5E00DDC1A34971700A1DEE2 /* LD31Opponent.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = LD31Opponent.cpp; path = Classes/LD31Opponent.cpp; sourceTree = "<group>"; };
+		D5E00DDD1A34971700A1DEE2 /* LD31Opponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LD31Opponent.h; path = Classes/LD31Opponent.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +118,8 @@
 				D5E00DD11A348E2200A1DEE2 /* LD31Racket.h */,
 				D5E00DD41A34910600A1DEE2 /* LD31Ball.cpp */,
 				D5E00DD51A34910600A1DEE2 /* LD31Ball.h */,
+				D5E00DDC1A34971700A1DEE2 /* LD31Opponent.cpp */,
+				D5E00DDD1A34971700A1DEE2 /* LD31Opponent.h */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -150,6 +156,7 @@
 				D5E00DD31A348E2200A1DEE2 /* LD31Racket.h in Headers */,
 				D5D2AE161A338DEC006C5C96 /* LD31Application.h in Headers */,
 				D5D2AE181A338DEC006C5C96 /* LD31FullscreenEffects.h in Headers */,
+				D5E00DDF1A34971700A1DEE2 /* LD31Opponent.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5E00DDE1A34971700A1DEE2 /* LD31Opponent.cpp in Sources */,
 				D5E00DD61A34910600A1DEE2 /* LD31Ball.cpp in Sources */,
 				D5D2AE151A338DEC006C5C96 /* LD31Application.cpp in Sources */,
 				D5D2ADEF1A3346A8006C5C96 /* main.cpp in Sources */,
