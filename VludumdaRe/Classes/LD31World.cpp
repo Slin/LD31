@@ -56,12 +56,10 @@ namespace LD31
 			tempCamera->SetHMD(_hmd);
 			tempCamera->GetLeftCamera()->SetSky(sky);
 			tempCamera->GetRightCamera()->SetSky(sky);
-			tempCamera->GetLeftCamera()->SetClipFar(150.0f);
-			tempCamera->GetRightCamera()->SetClipFar(150.0f);
+			tempCamera->GetLeftCamera()->SetClipFar(100.0f);
+			tempCamera->GetRightCamera()->SetClipFar(100.0f);
 			
-			//FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
-			//FullscreenEffects::GetSharedInstance()->CreateBloomPipeline(tempCamera->GetRightCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
 			
 			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera(), 512);
@@ -95,12 +93,9 @@ namespace LD31
 		levelEnt->AddAttachment(body);
 		levelEnt->SetPosition(RN::Vector3(3.0f, 0.0f, 0.0f));
 		levelEnt->GetModel()->GetMaterialAtIndex(0, 0)->SetBlending(true);
-		levelEnt->GetModel()->GetMaterialAtIndex(0, 13)->AddTexture(RN::Texture::WithFile("textures/noise.png"));
 		levelEnt->GetModel()->GetMaterialAtIndex(0, 13)->SetShader(RN::Shader::WithFile("shaders/rn_Ground"));
 		
-		RN::Entity *waterent = new RN::Entity(RN::Model::WithFile("assets/water/water.sgm"));
-		waterent->GetModel()->GetMaterialAtIndex(0, 0)->SetDiscard(false);
-		waterent->GetModel()->GetMaterialAtIndex(0, 0)->SetBlending(false);
+		new RN::Entity(RN::Model::WithFile("assets/water/water.sgm"));
 		
 		_racket = new Racket();
 		_opponent = new Opponent();

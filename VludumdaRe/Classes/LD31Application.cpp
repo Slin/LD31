@@ -28,6 +28,8 @@ namespace LD31
 	{
 		SetTitle("VludumdaRe");
 		
+		RN::Texture::SetDefaultAnisotropyLevel(1);
+		
 		RN::UI::Widget *widget = new RN::UI::Widget(RN::UI::Widget::Style::Borderless);
 		RN::UI::Label *text = new RN::UI::Label();
 		text->SetText(RNCSTR("IMPORTANT: Your Oculud Rift needs to be plugged in on startup, UNPLUG your Oculus Rift USB cable now! Your Hydra controllers need to be placed onto the base station and it has to be plugged in.\n\nPress space to continue."));
