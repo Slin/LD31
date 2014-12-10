@@ -100,6 +100,13 @@ namespace LD31
 		_racket = new Racket();
 		_opponent = new Opponent();
 		_opponent->SetStartPosition(RN::Vector3(0.0f, 1.0, -18.0f));
+
+		if(_hmd)
+		{
+			RN::Timer::ScheduledTimerWithDuration(std::chrono::seconds(6), [this] {
+				_hmd->DismissSafetyWarning();
+			}, false);
+		}
 	}
 
 	void World::Update(float delta)

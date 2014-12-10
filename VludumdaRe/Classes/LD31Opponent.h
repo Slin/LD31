@@ -9,6 +9,8 @@
 #ifndef __VludumdaRe__LD31Opponent__
 #define __VludumdaRe__LD31Opponent__
 
+#include <Rayne/Rayne.h>
+
 namespace LD31
 {
 	class Opponent : public RN::Entity

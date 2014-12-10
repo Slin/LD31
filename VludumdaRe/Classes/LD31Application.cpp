@@ -30,6 +30,17 @@ namespace LD31
 		
 		RN::Texture::SetDefaultAnisotropyLevel(1);
 		
+#ifdef WIN32
+		RO::HMD *hmd = RO::System::GetSharedInstance()->GetHMD(0);
+		if(hmd)
+		{
+			hmd->SetAsDisplay(false);
+		}
+
+		RN::World *world = new World();
+		world->Downcast<LD31::World>()->SetHMD(hmd);
+		RN::WorldCoordinator::GetSharedInstance()->LoadWorld(world->Autorelease());
+#else
 		RN::UI::Widget *widget = new RN::UI::Widget(RN::UI::Widget::Style::Borderless);
 		RN::UI::Label *text = new RN::UI::Label();
 		text->SetText(RNCSTR("IMPORTANT: Your Oculud Rift needs to be plugged in on startup, UNPLUG your Oculus Rift USB cable now! Your Hydra controllers need to be placed onto the base station and it has to be plugged in.\n\nPress space to continue."));
@@ -75,6 +86,7 @@ namespace LD31
 			}
 			
 		}, this);
+#endif
 	}
 	
 	void Application::WillExit()

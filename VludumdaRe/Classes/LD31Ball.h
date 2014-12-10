@@ -9,6 +9,8 @@
 #ifndef __VludumdaRe__LD31Ball__
 #define __VludumdaRe__LD31Ball__
 
+#include <Rayne/Rayne.h>
+
 namespace LD31
 {
 	class Ball : public RN::Entity

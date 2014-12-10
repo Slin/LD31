@@ -9,6 +9,8 @@
 #ifndef __VludumdaRe__LD31Racket__
 #define __VludumdaRe__LD31Racket__
 
+#include <Rayne/Rayne.h>
+
 namespace LD31
 {
 	class Racket : public RN::SceneNode
