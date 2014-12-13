@@ -41,7 +41,7 @@ namespace LD31
 			
 				float timeToGround = -ballBody->GetLinearVelocity().y/9.81+sqrt((ballBody->GetLinearVelocity().y/9.81)*(ballBody->GetLinearVelocity().y/9.81) + targetPosition.y/(0.5*9.81));
 				targetPosition += ballBody->GetLinearVelocity()*timeToGround*0.1f;
-				targetPosition.y = 1.0f;
+				targetPosition.y = _startPosition.y;
 				SetPosition(targetPosition);
 				
 				if((ball->GetPosition()-GetPosition()).GetLength() < 1.5f)

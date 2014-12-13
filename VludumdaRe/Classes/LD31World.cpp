@@ -56,12 +56,12 @@ namespace LD31
 			_camera = new RO::Camera(_hmd, 1.0f, RN::Texture::Format::RGB16F);
 			RO::Camera *tempCamera = static_cast<RO::Camera *>(_camera);
 			tempCamera->SetSky(sky);
-			tempCamera->SetClipFar(500.0f);
+			tempCamera->SetClipFar(1000.0f);
 			
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
 			
-			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera(), 512);
+			shadowParam = RN::ShadowParameter(tempCamera->GetLeftCamera(), 1024);
 		}
 		else
 		{
@@ -80,8 +80,8 @@ namespace LD31
 		sun->SetRotation(RN::Vector3(-45.0, -60.0, 0.0));
 		sun->SetIntensity(1.5f);
 		
-		shadowParam.distanceBlendFactor = 0.02f;
-		shadowParam.maxShadowDist = 0.1f;
+		shadowParam.distanceBlendFactor = 0.05f;
+		shadowParam.maxShadowDist = 0.08f;
 		if(_shadows)
 			sun->ActivateShadows(shadowParam);
 		
@@ -100,7 +100,7 @@ namespace LD31
 		
 		_racket = new Racket();
 		_opponent = new Opponent();
-		_opponent->SetStartPosition(RN::Vector3(0.0f, 1.0, -18.0f));
+		_opponent->SetStartPosition(RN::Vector3(0.0f, 0.5, -18.0f));
 
 		if(_hmd)
 		{
