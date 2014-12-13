@@ -51,13 +51,10 @@ namespace LD31
 		RN::ShadowParameter shadowParam;
 		if(_hmd)
 		{
-			_camera = new RO::Camera(RN::Texture::Format::RGB16F);
+			_camera = new RO::Camera(_hmd, 1.0f, RN::Texture::Format::RGB16F);
 			RO::Camera *tempCamera = static_cast<RO::Camera *>(_camera);
-			tempCamera->SetHMD(_hmd);
-			tempCamera->GetLeftCamera()->SetSky(sky);
-			tempCamera->GetRightCamera()->SetSky(sky);
-			tempCamera->GetLeftCamera()->SetClipFar(100.0f);
-			tempCamera->GetRightCamera()->SetClipFar(100.0f);
+			tempCamera->SetSky(sky);
+			tempCamera->SetClipFar(150.0f);
 			
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
