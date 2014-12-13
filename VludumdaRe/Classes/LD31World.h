@@ -27,7 +27,7 @@ namespace LD31
 		World();
 		~World() override;
 		
-		void SetHMD(RO::HMD *hmd);
+		void SetHMD(RO::HMD *hmd, bool shadows);
 		
 		void LoadOnThread(RN::Thread *thread, RN::Deserializer *deserializer) override;
 		void Update(float delta) override;
@@ -42,6 +42,8 @@ namespace LD31
 		int _triggerCount;
 		RO::HMD *_hmd;
 		RN::Vector3 _positionOffset;
+		
+		bool _shadows;
 	};
 }
 
