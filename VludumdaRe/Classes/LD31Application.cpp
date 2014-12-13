@@ -28,10 +28,7 @@ namespace LD31
 	{
 		SetTitle("VludumdaRe");
 		
-		RN::Texture::SetDefaultAnisotropyLevel(1);
-		RN::Kernel::GetSharedInstance()->SetMaxFPS(78);
-		
-		RN::Vector2 screensize = RN::Window::GetSharedInstance()->GetSize();
+		RN::Texture::SetDefaultAnisotropyLevel(16);
 		
 #ifdef WIN32
 		RO::HMD *hmd = RO::System::GetSharedInstance()->GetHMD(0);
@@ -41,9 +38,11 @@ namespace LD31
 		}
 
 		RN::World *world = new World();
-		world->Downcast<LD31::World>()->SetHMD(hmd);
+		world->Downcast<LD31::World>()->SetHMD(hmd, true);
 		RN::WorldCoordinator::GetSharedInstance()->LoadWorld(world->Autorelease());
 #else
+		RN::Vector2 screensize = RN::Window::GetSharedInstance()->GetSize();
+
 		RN::UI::Widget *widget = new RN::UI::Widget(RN::UI::Widget::Style::Borderless);
 		RN::UI::Label *text = new RN::UI::Label();
 		text->SetText(RNCSTR("IMPORTANT:\nYour Oculus Rifts USB cable may not be connected yet!\nYour Hydra controllers need to be placed onto the base station and it has to be plugged in.\nThe Hydras cable connecions should be pointing away from you.\n\nPress space to continue."));

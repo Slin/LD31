@@ -56,7 +56,7 @@ namespace LD31
 			_camera = new RO::Camera(_hmd, 1.0f, RN::Texture::Format::RGB16F);
 			RO::Camera *tempCamera = static_cast<RO::Camera *>(_camera);
 			tempCamera->SetSky(sky);
-			tempCamera->SetClipFar(150.0f);
+			tempCamera->SetClipFar(500.0f);
 			
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetLeftCamera());
 			FullscreenEffects::GetSharedInstance()->CreateGammaPipeline(tempCamera->GetRightCamera());
@@ -81,6 +81,7 @@ namespace LD31
 		sun->SetIntensity(1.5f);
 		
 		shadowParam.distanceBlendFactor = 0.02f;
+		shadowParam.maxShadowDist = 0.1f;
 		if(_shadows)
 			sun->ActivateShadows(shadowParam);
 		
