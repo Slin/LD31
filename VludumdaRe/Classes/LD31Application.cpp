@@ -29,6 +29,9 @@ namespace LD31
 		SetTitle("VludumdaRe");
 		
 		RN::Texture::SetDefaultAnisotropyLevel(1);
+		RN::Kernel::GetSharedInstance()->SetMaxFPS(78);
+		
+		RN::Vector2 screensize = RN::Window::GetSharedInstance()->GetSize();
 		
 #ifdef WIN32
 		RO::HMD *hmd = RO::System::GetSharedInstance()->GetHMD(0);
@@ -43,14 +46,15 @@ namespace LD31
 #else
 		RN::UI::Widget *widget = new RN::UI::Widget(RN::UI::Widget::Style::Borderless);
 		RN::UI::Label *text = new RN::UI::Label();
-		text->SetText(RNCSTR("IMPORTANT: Your Oculud Rift needs to be plugged in on startup, UNPLUG your Oculus Rift USB cable now! Your Hydra controllers need to be placed onto the base station and it has to be plugged in.\n\nPress space to continue."));
+		text->SetText(RNCSTR("IMPORTANT:\nYour Oculus Rifts USB cable may not be connected yet!\nYour Hydra controllers need to be placed onto the base station and it has to be plugged in.\nThe Hydras cable connecions should be pointing away from you.\n\nPress space to continue."));
 		text->SetLineBreak(RN::UI::LineBreakMode::WordWrapping);
 		text->SetNumberOfLines(0);
-		text->SetFrame(RN::Rect(10.0f, 10.0f, 280.0f, 280.0f));
+		text->SetAlignment(RN::UI::TextAlignment::Center);
+		text->SetFrame(RN::Rect(10.0f, 50.0f, screensize.x-20.0f, screensize.y-100.0f));
 		widget->GetContentView()->AddSubview(text->Autorelease());
 		widget->GetContentView()->SetBackgroundColor(RN::UI::Color::White());
 		widget->Open();
-		widget->SetFrame(RN::Rect(0.0f, 0.0f, 300.0f, 300.0f));
+		widget->SetFrame(RN::Rect(0.0f, 0.0f, screensize.x, screensize.y));
 		widget->Autorelease();
 		
 		RN::MessageCenter::GetSharedInstance()->AddObserver(kRNInputEventMessage, [this, text, widget](RN::Message *message) {
@@ -59,13 +63,16 @@ namespace LD31
 			if(event->GetType() == RN::Event::Type::KeyDown)
 			{
 				char key = event->GetCharacter();
+				bool shadows = false;
 				switch(key)
 				{
+					case 's':
+						shadows = true;
 					case ' ':
 						if(_setupStep == 0)
 						{
 							SX::System::GetSharedInstance();
-							text->SetText(RNCSTR("Now plugin your Oculus Rift and wait until it is detected by your system or continue without!\n\nPress space to continue."));
+							text->SetText(RNCSTR("Now plugin your Oculus Rift and wait until it is detected by your system!\nTo calibrate your hand position to your head position in game,\nmove any controller to your right ear and press its start button.\nThe controller without the racket, creates a ball when\nyou press its trigger and releases it if you release the trigger.\n\nPress space to continue.\nOr S to continue with shadows.\n\n\nIf your racket gets stuck in the ground, hold the controller up over your head and shake."));
 						}
 						else if(_setupStep == 1)
 						{
@@ -77,7 +84,7 @@ namespace LD31
 							
 							widget->Close();
 							RN::World *world = new World();
-							world->Downcast<LD31::World>()->SetHMD(hmd);
+							world->Downcast<LD31::World>()->SetHMD(hmd, shadows);
 							RN::WorldCoordinator::GetSharedInstance()->LoadWorld(world->Autorelease());
 						}
 						_setupStep += 1;

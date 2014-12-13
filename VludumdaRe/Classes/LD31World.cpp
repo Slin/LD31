@@ -15,20 +15,22 @@
 namespace LD31
 {
 	World::World() :
-		RN::World("GenericSceneManager"), _hmd(nullptr), _ball(nullptr), _triggerCount(0)
+		RN::World("GenericSceneManager"), _hmd(nullptr), _ball(nullptr), _triggerCount(0), _shadows(false)
 	{
 		RN::bullet::PhysicsWorld *attachment = new RN::bullet::PhysicsWorld();
 		attachment->SetStepSize(1.0/240.0, 200);
 		btContactSolverInfo &solverInfo = attachment->GetBulletDynamicsWorld()->getSolverInfo();
-		solverInfo.m_numIterations = 100;
+		solverInfo.m_numIterations = 50;
 		AddAttachment(attachment);
 	}
 	
 	World::~World()
 	{}
 	
-	void World::SetHMD(RO::HMD *hmd)
+	void World::SetHMD(RO::HMD *hmd, bool shadows)
 	{
+		_shadows = shadows;
+		
 		if(_hmd)
 			return;
 		
@@ -79,7 +81,8 @@ namespace LD31
 		sun->SetIntensity(1.5f);
 		
 		shadowParam.distanceBlendFactor = 0.02f;
-		sun->ActivateShadows(shadowParam);
+		if(_shadows)
+			sun->ActivateShadows(shadowParam);
 		
 		RN::Renderer::GetSharedInstance()->SetHDRExposure(1.0f);
 		RN::Renderer::GetSharedInstance()->SetHDRWhitePoint(2.5f);
@@ -128,6 +131,13 @@ namespace LD31
 		
 		SX::Controller *ballcontroller = SX::System::GetSharedInstance()->GetController(0, 1);
 		_triggerCount += 1;
+		
+		if(_hmd && ballcontroller->GetButtonJustPressed(SIXENSE_BUTTON_START))
+		{
+			RN::Vector3 headPosition = _camera->Downcast<RO::Camera>()->GetHead()->GetPosition();
+			_positionOffset = headPosition-ballcontroller->GetPosition();
+			_positionOffset += RN::Vector3(0.11f, 0.0f, 0.0f);
+		}
 		
 		if(ballcontroller->GetTriggerJustPressed())
 		{
